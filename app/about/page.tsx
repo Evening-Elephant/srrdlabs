@@ -55,11 +55,11 @@ const VISION_AIMS = [
 
 const TEAM = [
   { name: 'Dr. Srinivas G',       role: 'Founder & Director',              initials: 'SG' },
-  { name: 'Shyama',               role: 'Senior Research Scientist',        initials: 'SH' },
-  { name: 'Dr. Eda',              role: 'Principal Scientist',              initials: 'ED' },
+  { name: 'Shyama',               role: 'BDM Global & Communication Manager',        initials: 'SH' },
+  { name: 'Dr. Eda',              role: 'Scientific Advisor',              initials: 'ED' },
   { name: 'Dr. B M Choudary',     role: 'Scientific Advisor',              initials: 'BC' },
-  { name: 'Dr. Saradhy Yellanki', role: 'Research Scientist',              initials: 'SY' },
-  { name: 'Dr. Laxmikantham',     role: 'Analytical Sciences Lead',        initials: 'LK' },
+  { name: 'Dr. Partha Saradhy Yellamraju', role: 'Scientific advisor',              initials: 'SY' },
+  { name: 'Dr. Laxmikantham',     role: 'Ex-director Scientific Advisor',        initials: 'LK' },
 ];
 
 const WHO_WE_ARE_PILLARS = [
@@ -324,14 +324,23 @@ export default function AboutPage() {
                 combine deep scientific expertise with a problem-solving mindset, enabling us to
                 deliver molecules that are often difficult, rare, or entirely novel.
               </p>
-              <p style={{ color: 'var(--ink-mid)', lineHeight: 1.8, fontSize: '0.975rem' }}>
-                Our identity is shaped by four pillars — and a conviction that SRRD Laboratories is
-                not just a service provider:{' '}
-                <strong style={{ color: 'var(--ink)' }}>
-                  we are a scientific partner in innovation. We don't just deliver compounds; we
-                  deliver confidence, clarity, and scientific certainty.
-                </strong>
-              </p>
+              <p
+  style={{
+    color: 'var(--ink-mid)',
+    lineHeight: 1.8,
+    fontSize: '0.975rem',
+  }}
+>
+  <strong style={{ color: 'var(--ink)' }}>
+    SRRD Laboratories is not just a service provider; we don’t just deliver
+    compounds —
+  </strong>{' '}
+  we are a scientific partner in innovation, delivering confidence, clarity,
+  and scientific certainty.
+  <br />
+  <br />
+  Our identity is shaped by four pillars.
+</p>
             </div>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -521,9 +530,9 @@ export default function AboutPage() {
                   className="rounded-[14px] p-8 h-full transition-all duration-300 hover:-translate-y-1"
                   style={{ background: '#f4f8fb', border: '1px solid var(--border)' }}
                 >
-                  <div style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.1em', color: 'var(--teal)', marginBottom: '0.75rem' }}>
+                  {/* <div style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.1em', color: 'var(--teal)', marginBottom: '0.75rem' }}>
                     {v.n}
-                  </div>
+                  </div> */}
                   <div style={{ ...S, fontSize: '1rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '0.5rem' }}>
                     {v.title}
                   </div>

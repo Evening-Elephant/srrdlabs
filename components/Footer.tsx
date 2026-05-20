@@ -38,19 +38,70 @@ export default function Footer() {
         </div>
 
         {/* Products */}
-        <div>
+        {/* <div>
           <h4 style={{ fontFamily:'Syne,sans-serif', fontSize:'0.75rem', fontWeight:700, color:'white', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:'1.25rem' }}>Key Products</h4>
           <ul className="list-none flex flex-col gap-3">
             {[
-              ['ndma','N-Nitrosodimethylamine'],
-              ['ndea','N-Nitrosodiethylamine'],
-              ['nmor','N-Nitrosomorpholine'],
-              ['caffeine-api','Caffeine Reference Std'],
+              ['ndma','Impurities'],
+              ['ndea','Isotope labelled compounds'],
+              ['nmor','Nitrosamine impurities'],
+              ['caffeine-api','Building blocks'],
+               ['caffeine-api','Custom Molecules'],
+                ['caffeine-api','Intermediates'],
             ].map(([id, name]) => (
               <li key={id}><Link href={`/products/${id}`} style={{ fontSize:'0.875rem', color:'rgba(255,255,255,0.45)', textDecoration:'none' }}>{name}</Link></li>
             ))}
           </ul>
-        </div>
+        </div> */}
+        <div>
+  <h4
+    style={{
+      fontFamily: 'Syne,sans-serif',
+      fontSize: '0.75rem',
+      fontWeight: 700,
+      color: 'white',
+      letterSpacing: '0.1em',
+      textTransform: 'uppercase',
+      marginBottom: '1.25rem',
+    }}
+  >
+    Key Products
+  </h4>
+
+  <ul
+    style={{
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.75rem',
+    }}
+  >
+    {[
+      ['impurities', 'Impurities'],
+      ['isotope-labelled-compounds', 'Isotope Labelled Compounds'],
+      ['nitrosamine-impurities', 'Nitrosamine Impurities'],
+      ['building-blocks', 'Building Blocks'],
+      ['custom-molecules', 'Custom Molecules'],
+      ['intermediates', 'Intermediates'],
+    ].map(([id, name]) => (
+      <li key={id}>
+        <Link
+          href={`/products?category=${id}`}
+          style={{
+            fontSize: '0.875rem',
+            color: 'rgba(255,255,255,0.55)',
+            textDecoration: 'none',
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+          }}
+        >
+          {name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
         {/* Contact */}
         <div>
@@ -66,7 +117,7 @@ export default function Footer() {
 
       <div className="flex flex-col sm:flex-row justify-between items-center px-6 md:px-16 py-5 gap-2" style={{ borderTop:'1px solid rgba(255,255,255,0.07)', fontSize:'0.78rem' }}>
         <span>© 2025 SRRD Laboratories. All rights reserved.</span>
-        <span>A 1/5, SV Cooperative Society, Balangar, Hyderabad</span>
+        <span>Balangar, Hyderabad</span>
       </div>
     </footer>
   );

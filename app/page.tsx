@@ -78,7 +78,7 @@ export default function HomePage() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-0 pt-8" style={{ borderTop: '1px solid var(--border)' }}>
+          <div className="flex items-center gap-2 pr-8 mr-8 pt-5" style={{ borderTop: '1px solid var(--border)' }}>
             {[['Impurities','Synthesised'],['Isotope','Labelled Cpds'],['Custom','Multi-step Synthesis']].map(([v, l], i) => (
               <div key={v} className="flex flex-col gap-1 pr-8 mr-8" style={i < 2 ? { borderRight: '1px solid var(--border)' } : {}}>
                 <span style={{ ...S, fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary)', lineHeight: 1 }}>{v}</span>
@@ -294,7 +294,7 @@ export default function HomePage() {
           <span style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--ink-muted)', whiteSpace: 'nowrap' }}>Capabilities</span>
           <div style={{ width: 1, height: 24, background: 'var(--border-mid)', flexShrink: 0 }} />
           <div className="flex gap-6 flex-wrap">
-            {['Impurity Synthesis','Isotope Labelling','Custom Multi-step Synthesis','API Impurities','N-Nitroso Compounds','Regulatory-Ready Materials'].map(t => (
+            {['Isotope Labelling','Custom Multi-step Synthesis','Impurities','N-Nitroso Compounds','Regulatory-Ready Materials'].map(t => (
               <div key={t} className="flex items-center gap-2" style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--ink-mid)', whiteSpace: 'nowrap' }}>
                 <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--teal)', display: 'inline-block' }} />{t}
               </div>

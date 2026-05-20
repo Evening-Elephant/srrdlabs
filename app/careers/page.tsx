@@ -6,10 +6,12 @@ const S = { fontFamily: "Syne, sans-serif" } as const;
 const M = { fontFamily: "JetBrains Mono, monospace" } as const;
 
 const ROLES = [
-  { title: 'Senior Synthetic Chemist', type: 'Full-time', location: 'Hyderabad, India', desc: 'Lead complex multi-step synthesis projects — impurities, isotope-labelled compounds, and custom molecules for pharmaceutical clients.' },
-  { title: 'Analytical Scientist (NMR / HRMS)', type: 'Full-time', location: 'Hyderabad, India', desc: 'Characterise pharmaceutical reference standards using advanced NMR, HRMS, HPLC, and IR techniques. Generate analytical data packages for regulatory submissions.' },
-  { title: 'Research Chemist – Isotope Labelling', type: 'Full-time', location: 'Hyderabad, India', desc: 'Specialise in radio and stable isotope labelling (¹³C, ²H, ¹⁵N) for pharmaceutical metabolism and bioanalytical research.' },
   { title: 'Project Manager – CRO', type: 'Full-time', location: 'Hyderabad, India', desc: 'Manage scientific projects from kick-off to delivery — coordinating between synthesis teams, analytical scientists, and pharmaceutical clients.' },
+  { title: 'Senior Synthetic Chemist', type: 'Full-time', location: 'Hyderabad, India', desc: 'Lead complex multi-step synthesis projects — impurities, isotope-labelled compounds, and custom molecules for pharmaceutical clients.' },
+  { title: 'Research Chemist – Isotope Labelling', type: 'Full-time', location: 'Hyderabad, India', desc: 'Specialise in radio and stable isotope labelling (¹³C, ²H, ¹⁵N) for pharmaceutical metabolism and bioanalytical research.' },
+  { title: 'Analytical Chemist', type: 'Full-time', location: 'Hyderabad, India', desc: 'Handling analytical equipment and expertise in characterise pharmaceutical reference standards using advanced NMR, HRMS, HPLC, and IR techniques. Generate analytical data packages for regulatory submissions.' },
+  
+  
 ];
 
 const inputStyle: React.CSSProperties = {
@@ -70,6 +72,7 @@ export default function CareersPage() {
               ['Meaningful Work', 'The compounds we deliver support drug development and patient safety. The work matters — and you will feel that.'],
               ['Collaborative Environment', 'Small teams, direct communication, and a culture where every scientific opinion is heard and respected.'],
               ['Continuous Growth', 'Exposure to complex, novel problems across impurity synthesis, isotope chemistry, and analytical science.'],
+              ['Data Integrity', 'Transparent documentation, defensible spectra, validated methods, and traceable batch records.'],
             ].map(([t, d]) => (
               <div key={t} className="flex gap-4 p-5 rounded-xl" style={{ background: '#f4f8fb', border: '1px solid rgba(10,92,138,.1)' }}>
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: 'var(--teal)', flexShrink: 0, marginTop: '0.35rem' }} />
@@ -122,7 +125,7 @@ export default function CareersPage() {
             <div style={{ ...M, fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--teal)', marginBottom: '0.75rem' }}>Don't See Your Role?</div>
             <h2 style={{ ...S, fontSize: 'clamp(1.6rem,2.5vw,2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: '0.75rem' }}>Send Us an Open Application</h2>
             <p style={{ color: 'var(--ink-mid)', lineHeight: 1.7, maxWidth: 500, margin: '0 auto' }}>
-              If you are a talented scientist who believes in the SRRD philosophy, we want to hear
+              If you are a committed chemist who believes in the SRRD philosophy, we want to hear
               from you — regardless of whether there is a specific opening right now.
             </p>
           </div>
@@ -149,13 +152,11 @@ export default function CareersPage() {
                 <label style={{ ...M, fontSize: '0.65rem', letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--ink-mid)', fontWeight: 600 }}>Area of Expertise *</label>
                 <select style={{ ...inputStyle, backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B8FA8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E\")", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', backgroundSize: '14px', paddingRight: '2.5rem', appearance: 'none', cursor: 'pointer' }}>
                   <option value="">Select your specialisation…</option>
-                  <option>Synthetic / Organic Chemistry</option>
-                  <option>Isotope Labelling (Radio / Stable)</option>
-                  <option>Analytical Chemistry (NMR / HRMS / HPLC)</option>
-                  <option>Pharmaceutical Impurity Research</option>
-                  <option>Project Management / CRO Operations</option>
+                  <option>Synthetic organic chemistry</option>
+                  <option>Analytical chemistry</option>
+                  <option>Project management/CRO operations</option>
                   <option>Other</option>
-                </select>
+                  </select>
               </div>
               <div className="flex flex-col gap-2">
                 <label style={{ ...M, fontSize: '0.65rem', letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--ink-mid)', fontWeight: 600 }}>LinkedIn / Portfolio URL</label>

@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: '/products', label: 'Products' },
   { href: '/blog',     label: 'Blog' },
   { href: '/careers',  label: 'Careers' },
+  { href: '/faq',     label: 'Faq' },
 ];
 
 function isActive(path: string, href: string) {

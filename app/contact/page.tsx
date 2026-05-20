@@ -91,7 +91,7 @@ export default function ContactPage() {
               style={{
                 ...S,
                 fontSize: 'clamp(2.5rem,4vw,4rem)',
-                fontWeight: 800,
+                fontWeight: 700,
                 lineHeight: 1.05,
                 letterSpacing: '-0.025em',
                 marginBottom: '1.25rem',
@@ -213,9 +213,9 @@ export default function ContactPage() {
               Tell Us About<br />Your Project
             </h2>
             <p style={{ color: 'var(--ink-muted)', fontSize: '0.9rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
-              We respond to all project enquiries within one business day. All communications are
-              treated with strict confidentiality — we can also execute an NDA before discussing
-              project details if required.
+              We respond to all project enquiries within one business day. All communications are treated with strict confidentiality — we can also execute an NDA before discussing project details if required
+Saturday- 09: 00 to 14:00
+
             </p>
           </Reveal>
 
