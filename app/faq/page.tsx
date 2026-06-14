@@ -161,47 +161,76 @@ const FAQS = [
   },
 ];
 
-function FAQCard({ question, answer }: { question: string; answer: React.ReactNode }) {
+function FAQAccordion({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: React.ReactNode;
+}) {
   return (
-    <div
-      className="rounded-2xl overflow-hidden transition-all hover:-translate-y-1"
+    <details
+      className="group overflow-hidden rounded-2xl transition-all duration-300"
       style={{
-        background: 'white',
+        background: '#fff',
         border: '1.5px solid rgba(10,92,138,.12)',
         boxShadow: '0 8px 30px rgba(10,92,138,.05)',
       }}
     >
-      <div style={{ height: 4, background: 'var(--grad-btn)' }} />
-      <div className="p-5 md:p-7">
-        <div className="flex items-start gap-3 md:gap-4">
-          <div
-            style={{
-              width: 38,
-              height: 38,
-              borderRadius: 10,
-              background: 'var(--teal-pale)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
-            }}
-          >
-            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="var(--teal)" strokeWidth="2.4">
-              <path d="M9.09 9a3 3 0 1 1 5.82 1c0 2-3 3-3 3" />
-              <path d="M12 17h.01" />
-            </svg>
-          </div>
-          <div className="flex-1 min-w-0">
-            <h3 style={{ ...S, fontSize: '1rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '0.7rem', lineHeight: 1.4 }}>
-              {question}
-            </h3>
-            <div className="faq-content" style={{ color: 'var(--ink-mid)', fontSize: '0.9rem', lineHeight: 1.8 }}>
-              {typeof answer === 'string' ? <p>{answer}</p> : answer}
-            </div>
-          </div>
+      <summary
+        className="flex items-center justify-between cursor-pointer list-none p-5 md:p-6"
+        style={{
+          userSelect: 'none',
+          outline: 'none',
+        }}
+      >
+        <div
+          style={{
+            ...S,
+            fontSize: '1rem',
+            fontWeight: 700,
+            color: 'var(--ink)',
+            lineHeight: 1.5,
+            paddingRight: '1rem',
+          }}
+        >
+          {question}
         </div>
+
+        <div
+          className="faq-icon"
+          style={{
+            width: 36,
+            height: 36,
+            borderRadius: 10,
+            background: 'var(--teal-pale)',
+            color: 'var(--teal)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0,
+            fontSize: '1.4rem',
+            fontWeight: 500,
+            transition: 'all .3s ease',
+          }}
+        >
+          +
+        </div>
+      </summary>
+
+      <div
+        className="faq-answer"
+        style={{
+          padding: '0 1.5rem 1.5rem',
+          borderTop: '1px solid rgba(10,92,138,.08)',
+          color: 'var(--ink-mid)',
+          fontSize: '0.92rem',
+          lineHeight: 1.8,
+        }}
+      >
+        {typeof answer === 'string' ? <p>{answer}</p> : answer}
       </div>
-    </div>
+    </details>
   );
 }
 
@@ -273,8 +302,12 @@ export default function FAQPage() {
                 {/* Cards grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5">
                   {section.items.map((item) => (
-                    <FAQCard key={item.q} question={item.q} answer={item.a} />
-                  ))}
+  <FAQAccordion
+    key={item.q}
+    question={item.q}
+    answer={item.a}
+  />
+))}
                 </div>
               </div>
             ))}

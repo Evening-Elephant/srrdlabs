@@ -30,9 +30,9 @@ export default function CareersPage() {
       <div style={{ background: 'var(--grad-hero)', color: 'white', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 70% 50%,rgba(0,196,212,.18) 0%,transparent 55%)', pointerEvents: 'none' }} />
         <div className="max-w-7xl mx-auto px-6 md:px-16 py-20 relative z-10">
-          <div style={{ ...M, display: 'inline-block', background: 'rgba(0,196,212,.2)', border: '1px solid rgba(0,196,212,.35)', borderRadius: 100, padding: '0.3rem 1rem', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--cyan)', marginBottom: '1.5rem' }}>
+          {/* <div style={{ ...M, display: 'inline-block', background: 'rgba(0,196,212,.2)', border: '1px solid rgba(0,196,212,.35)', borderRadius: 100, padding: '0.3rem 1rem', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--cyan)', marginBottom: '1.5rem' }}>
             Careers at SRRD
-          </div>
+          </div> */}
           <h1 style={{ ...S, fontSize: 'clamp(2.5rem,4vw,4rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.025em', marginBottom: '1.25rem', maxWidth: 600 }}>
             Work Where Chemistry<br />
             <em style={{ fontStyle: 'italic', color: 'var(--cyan)' }}>Meets Purpose</em>
@@ -49,9 +49,24 @@ export default function CareersPage() {
       <section style={{ background: '#fff', padding: '6rem 2rem' }} className="px-6 md:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <div style={{ ...M, fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--teal)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-              <span style={{ width: 20, height: 2, background: 'var(--teal)', borderRadius: 1, display: 'inline-block' }} />Our Culture
-            </div>
+           <div style={{ marginBottom: '1rem' }}>
+  <span
+    style={{
+      display: 'inline-block',
+      padding: '0.55rem 1.4rem',
+      background: 'linear-gradient(135deg, #E5C158, #C9A227)',
+      color: '#fff',
+      borderRadius: '999px',
+      fontSize: '0.8rem',
+      fontWeight: 700,
+      letterSpacing: '0.15em',
+      textTransform: 'uppercase',
+      boxShadow: '0 4px 12px rgba(201,162,39,0.25)',
+    }}
+  >
+    Our Culture
+  </span>
+</div>
             <h2 style={{ ...S, fontSize: 'clamp(1.9rem,3vw,2.6rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Chemists Who Think Deeply.<br />Deliver Precisely.
             </h2>

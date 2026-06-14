@@ -107,7 +107,7 @@ export default function Footer() {
         <div>
           <h4 style={{ fontFamily:'Syne,sans-serif', fontSize:'0.75rem', fontWeight:700, color:'white', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:'1.25rem' }}>Contact</h4>
           <ul className="list-none flex flex-col gap-3">
-            <li><a href="mailto:info@srrdlabs.com" style={{ fontSize:'0.875rem', color:'rgba(255,255,255,0.45)', textDecoration:'none' }}>info@srrdlabs.com</a></li>
+            <li><a href="mailto:info@srrdlaboratories.com" style={{ fontSize:'0.875rem', color:'rgba(255,255,255,0.45)', textDecoration:'none' }}>info@srrdlaboratories.com</a></li>
             <li><a href="tel:+919885204920" style={{ fontSize:'0.875rem', color:'rgba(255,255,255,0.45)', textDecoration:'none' }}>+91 98852 04920</a></li>
             <li><span style={{ fontSize:'0.875rem', color:'rgba(255,255,255,0.45)' }}>Balangar, Hyderabad</span></li>
             <li><span style={{ fontSize:'0.875rem', color:'rgba(255,255,255,0.45)' }}>Telangana 500037, India</span></li>

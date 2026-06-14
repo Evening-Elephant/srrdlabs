@@ -463,11 +463,59 @@ import Reveal from '@/components/Reveal';
 const S = { fontFamily: "Syne, sans-serif" } as const;
 const M = { fontFamily: "JetBrains Mono, monospace" } as const;
 
+// function Eyebrow({ children }: { children: string }) {
+//   return (
+//     <div className="mb-4">
+//       <span
+//         style={{
+//           display: 'inline-flex',
+//           alignItems: 'center',
+//           gap: '10px',
+//           padding: '8px 18px',
+//           background: 'rgba(212, 175, 55, 0.12)',
+//           border: '1px solid #D4AF37',
+//           borderRadius: '999px',
+//           color: '#D4AF37',
+//           fontSize: '0.85rem',
+//           fontWeight: 600,
+//           letterSpacing: '0.18em',
+//           textTransform: 'uppercase',
+//         }}
+//       >
+//         {/* <span
+//           style={{
+//             width: 24,
+//             height: 2,
+//             background: '#D4AF37',
+//             borderRadius: 2,
+//           }}
+//         /> */}
+//         {children}
+//       </span>
+//     </div>
+//   );
+// }
+
 function Eyebrow({ children }: { children: string }) {
   return (
-    <div className="flex items-center gap-3 mb-3" style={{ ...M, fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--teal)' }}>
-      <span style={{ width: 20, height: 2, background: 'var(--teal)', borderRadius: 1, display: 'inline-block', flexShrink: 0 }} />
-      {children}
+    <div style={{ marginBottom: '1rem' }}>
+      <span
+        style={{
+          display: 'inline-block',
+          padding: '0.55rem 1.4rem',
+          background: 'linear-gradient(135deg, #E5C158, #C9A227)',
+          color: '#fff',
+          borderRadius: '999px',
+          fontSize: '0.8rem',
+          fontWeight: 700,
+          letterSpacing: '0.15em',
+          textTransform: 'uppercase',
+          boxShadow: '0 4px 12px rgba(201,162,39,0.25)',
+          fontFamily: 'Plus Jakarta Sans, sans-serif',
+        }}
+      >
+        {children}
+      </span>
     </div>
   );
 }
@@ -661,7 +709,7 @@ export default function HomePage() {
           <span style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--ink-muted)', whiteSpace: 'nowrap' }}>Capabilities</span>
           <div style={{ width: 1, height: 24, background: 'var(--border-mid)', flexShrink: 0 }} />
           <div className="flex gap-6 flex-wrap">
-            {['Isotope Labelling','Custom Multi-step Synthesis','Impurities','N-Nitroso Compounds','Regulatory-Ready Materials'].map(t => (
+            {['Isotope Labelling','Custom Multi-step Synthesis','Impurities','N-Nitroso Compounds','Peptides'].map(t => (
               <div key={t} className="flex items-center gap-2" style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--ink-mid)', whiteSpace: 'nowrap' }}>
                 <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--teal)', display: 'inline-block' }} />{t}
               </div>
@@ -733,7 +781,7 @@ export default function HomePage() {
                 <div className="group relative rounded-[14px] p-9 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   style={{ background: '#fff', border: '1px solid var(--border)', overflow: 'hidden' }}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--grad-btn)', transform: 'scaleX(0)', transformOrigin: 'left', transition: 'transform 0.3s' }} className="group-hover:scale-x-100" />
-                  <span style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>{s.n}</span>
+                  {/* <span style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.1em', color: 'var(--ink-muted)' }}>{s.n}</span> */}
                   <div style={{ ...S, fontSize: '1.05rem', fontWeight: 700, color: 'var(--ink)' }}>{s.title}</div>
                   <p style={{ fontSize: '0.875rem', color: 'var(--ink-mid)', lineHeight: 1.65 }}>{s.desc}</p>
                 </div>
@@ -756,9 +804,19 @@ export default function HomePage() {
               Every impurity, every labelled compound, every analytical spectrum carries a responsibility — to the science, to the data, and ultimately to the patient.
             </p>
             <div style={{ display: 'inline-block', background: 'rgba(0,196,212,0.15)', border: '1px solid rgba(0,196,212,0.35)', borderRadius: 12, padding: '1.25rem 2.5rem' }}>
-              <div style={{ ...S, fontSize: '1.3rem', fontWeight: 800, color: 'var(--cyan)', letterSpacing: '-0.01em' }}>
-                Do the science right. Do it with integrity. Do it with purpose.
-              </div>
+              <div
+  style={{
+    ...S,
+    fontSize: '1.3rem',
+    fontWeight: 800,
+    letterSpacing: '-0.01em',
+    background: 'linear-gradient(135deg, #F4D03F, #C9A227)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+  }}
+>
+  Do the science right. Do it with integrity. Do it with purpose.
+</div>
             </div>
           </Reveal>
         </div>
@@ -780,7 +838,7 @@ export default function HomePage() {
               <Reveal key={v.n} delay={i % 3 * 80}>
                 <div className="rounded-[14px] p-8 h-full transition-all duration-300 hover:-translate-y-1"
                   style={{ background: '#f4f8fb', border: '1px solid var(--border)' }}>
-                  <div style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.1em', color: 'var(--teal)', marginBottom: '0.75rem' }}>{v.n}</div>
+                  {/* <div style={{ ...M, fontSize: '0.62rem', letterSpacing: '0.1em', color: 'var(--teal)', marginBottom: '0.75rem' }}>{v.n}</div> */}
                   <div style={{ ...S, fontSize: '1rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '0.5rem' }}>{v.title}</div>
                   <p style={{ fontSize: '0.875rem', color: 'var(--ink-mid)', lineHeight: 1.65 }}>{v.desc}</p>
                 </div>

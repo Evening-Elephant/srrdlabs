@@ -1080,9 +1080,9 @@ export default function ProductsPage() {
       <div style={{ background: 'var(--grad-hero)', color: 'white', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 75% 50%,rgba(0,196,212,.18) 0%,transparent 55%)', pointerEvents: 'none' }} />
         <div className="max-w-7xl mx-auto px-6 md:px-16 py-16 relative z-10">
-          <div style={{ ...M, display: 'inline-block', background: 'rgba(0,196,212,.2)', border: '1px solid rgba(0,196,212,.35)', borderRadius: 100, padding: '0.3rem 1rem', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--cyan)', marginBottom: '1.25rem' }}>
+          {/* <div style={{ ...M, display: 'inline-block', background: 'rgba(0,196,212,.2)', border: '1px solid rgba(0,196,212,.35)', borderRadius: 100, padding: '0.3rem 1rem', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--cyan)', marginBottom: '1.25rem' }}>
             Reference Standards Catalogue
-          </div>
+          </div> */}
           <h1 style={{ ...S, fontSize: 'clamp(2.2rem,3.5vw,3.5rem)', fontWeight: 800, lineHeight: 1.08, letterSpacing: '-0.025em', marginBottom: '0.75rem' }}>
             Pharmaceutical<br />Grade Products
           </h1>

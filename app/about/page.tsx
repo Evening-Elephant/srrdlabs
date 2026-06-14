@@ -54,12 +54,28 @@ const VISION_AIMS = [
 ];
 
 const TEAM = [
-  { name: 'Dr. Srinivas G',       role: 'Founder & Director',              initials: 'SG' },
-  { name: 'Shyama',               role: 'BDM Global & Communication Manager',        initials: 'SH' },
-  { name: 'Dr. Eda',              role: 'Scientific Advisor',              initials: 'ED' },
-  { name: 'Dr. B M Choudary',     role: 'Scientific Advisor',              initials: 'BC' },
-  { name: 'Dr. Partha Saradhy Yellamraju', role: 'Scientific advisor',              initials: 'SY' },
-  { name: 'Dr. Laxmikantham',     role: 'Ex-director Scientific Advisor',        initials: 'LK' },
+  { name: 'Dr. Srinivas G', role: 'Founder & Director', initials: 'SG' },
+  { name: 'Dr. Eda', role: 'Scientific Advisor', initials: 'ED' },
+  { name: 'Shyama', role: 'BDM Global & Communication Manager', initials: 'SH' },
+
+  {
+    name: 'Dr. B M Choudary',
+    role: 'Scientific Advisor',
+    initials: 'BC',
+    link: 'https://en.wikipedia.org/wiki/B._M._Choudary',
+  },
+  {
+    name: 'Dr. Laxmikantham',
+    role: 'Ex-director Scientific Advisor',
+    initials: 'LK',
+    link: 'https://en.wikipedia.org/wiki/Lakshmi_Kantam',
+  },
+
+  {
+    name: 'Dr. Partha Saradhy Yellamraju',
+    role: 'Scientific Advisor',
+    initials: 'SY',
+  },
 ];
 
 const WHO_WE_ARE_PILLARS = [
@@ -81,33 +97,55 @@ const WHO_WE_ARE_PILLARS = [
   },
 ];
 
-function Eyebrow({ children, light = false }: { children: string; light?: boolean }) {
+// function Eyebrow({ children, light = false }: { children: string; light?: boolean }) {
+//   return (
+//     <div
+//       className="flex items-center gap-3 mb-3"
+//       style={{
+//         ...M,
+//         fontSize: '0.68rem',
+//         letterSpacing: '0.15em',
+//         textTransform: 'uppercase',
+//         color: light ? 'var(--cyan)' : 'var(--teal)',
+//       }}
+//     >
+//       <span
+//         style={{
+//           width: 20,
+//           height: 2,
+//           background: light ? 'var(--cyan)' : 'var(--teal)',
+//           borderRadius: 1,
+//           display: 'inline-block',
+//           flexShrink: 0,
+//         }}
+//       />
+//       {children}
+//     </div>
+//   );
+// }
+function Eyebrow({ children }: { children: string }) {
   return (
-    <div
-      className="flex items-center gap-3 mb-3"
-      style={{
-        ...M,
-        fontSize: '0.68rem',
-        letterSpacing: '0.15em',
-        textTransform: 'uppercase',
-        color: light ? 'var(--cyan)' : 'var(--teal)',
-      }}
-    >
+    <div style={{ marginBottom: '1rem' }}>
       <span
         style={{
-          width: 20,
-          height: 2,
-          background: light ? 'var(--cyan)' : 'var(--teal)',
-          borderRadius: 1,
           display: 'inline-block',
-          flexShrink: 0,
+          padding: '0.55rem 1.4rem',
+          background: 'linear-gradient(135deg, #E5C158, #C9A227)',
+          color: '#fff',
+          borderRadius: '999px',
+          fontSize: '0.8rem',
+          fontWeight: 700,
+          letterSpacing: '0.15em',
+          textTransform: 'uppercase',
+          boxShadow: '0 4px 12px rgba(201,162,39,0.25)',
+          fontFamily: 'Plus Jakarta Sans, sans-serif',
         }}
-      />
-      {children}
+      >
+        {children}
+      </span>
     </div>
   );
 }
-
 export default function AboutPage() {
   return (
     <>
@@ -131,7 +169,7 @@ export default function AboutPage() {
         />
         <div className="max-w-7xl mx-auto px-6 md:px-16 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <div
+            {/* <div
               style={{
                 ...M,
                 display: 'inline-block',
@@ -147,7 +185,7 @@ export default function AboutPage() {
               }}
             >
               About Us
-            </div>
+            </div> */}
             <h1
               style={{
                 ...S,
@@ -393,7 +431,7 @@ export default function AboutPage() {
             }}
           />
           <div className="relative z-10">
-            <Eyebrow light>Our Mission</Eyebrow>
+            <Eyebrow >Our Mission</Eyebrow>
             <h2
               style={{
                 ...S,
@@ -585,16 +623,18 @@ export default function AboutPage() {
                   }}
                 >
                   <div
-                    style={{
-                      ...S,
-                      fontSize: 'clamp(1.1rem,2vw,1.4rem)',
-                      fontWeight: 800,
-                      color: 'var(--cyan)',
-                      letterSpacing: '-0.01em',
-                    }}
-                  >
-                    Do the science right. Do it with integrity. Do it with purpose.
-                  </div>
+  style={{
+    ...S,
+    fontSize: '1.3rem',
+    fontWeight: 800,
+    letterSpacing: '-0.01em',
+    background: 'linear-gradient(135deg, #F4D03F, #C9A227)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+  }}
+>
+  Do the science right. Do it with integrity. Do it with purpose.
+</div>
                 </div>
               </div>
             </div>
@@ -832,7 +872,7 @@ export default function AboutPage() {
               </p>
             </div>
           </Reveal>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {TEAM.map((person, i) => (
               <Reveal key={person.name} delay={i * 60}>
                 <div className="flex flex-col items-center text-center gap-3">
@@ -873,7 +913,86 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             ))}
+          </div> */}
+          <div
+  className="flex gap-8 overflow-x-auto pb-4"
+  style={{
+    scrollbarWidth: 'none',
+    msOverflowStyle: 'none',
+  }}
+>
+  {TEAM.map((person, i) => (
+    <Reveal key={person.name} delay={i * 60}>
+      <div
+        className="flex flex-col items-center text-center gap-3 flex-shrink-0"
+        style={{ width: '180px' }}
+      >
+        <div
+          style={{
+            width: 80,
+            height: 80,
+            borderRadius: '50%',
+            background: 'var(--grad-btn)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 6px 20px rgba(10,92,138,0.25)',
+            marginBottom: '0.25rem',
+          }}
+        >
+          <span
+            style={{
+              ...S,
+              fontSize: '1.25rem',
+              fontWeight: 800,
+              color: 'white',
+            }}
+          >
+            {person.initials}
+          </span>
+        </div>
+
+        <div>
+          <div
+            style={{
+              ...S,
+              fontSize: '0.9rem',
+              fontWeight: 700,
+              color: 'var(--ink)',
+              lineHeight: 1.3,
+            }}
+          >
+            {person.link ? (
+              <a
+                href={person.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="team-link"
+              >
+                {person.name} ↗
+              </a>
+            ) : (
+              person.name
+            )}
           </div>
+
+          <div
+            style={{
+              ...M,
+              fontSize: '0.65rem',
+              color: 'var(--teal)',
+              letterSpacing: '0.05em',
+              marginTop: '0.3rem',
+              lineHeight: 1.4,
+            }}
+          >
+            {person.role}
+          </div>
+        </div>
+      </div>
+    </Reveal>
+  ))}
+</div>
         </div>
       </section>
 
